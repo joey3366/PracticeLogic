@@ -8,25 +8,26 @@
  *   lo resuelvan directamente.
  */
 
-function conjuntes(arr1 = [], arr2 = [], bol){
-
-    let out = []
-    if (bol == true) {
-        for(let element of arr1) {
-          if(arr2.includes(element)){
-            out.push(element)
-          }
-        }
-        
-    } else if(bol == false) {
-        for(let element of arr2) {
-          if (!arr1.includes(element)) {
-            out.push(element)
-          }
-        }
-        
+function conjuntes(arr1 = [], arr2 = [], bol) {
+  let out = [];
+  if (bol == true) {
+    for (let element of arr1) {
+      if (arr2.includes(element)) {
+        out.push(element);
+      }
     }
-    return out
+  } else if (bol == false) {
+    for (let element of arr2) {
+      if (!arr1.includes(element)) {
+        out.push(element);
+      }
+    }
+  }
+  return out;
 }
 
-conjuntes(['a', 'e', 'i', 'o', 'u'], ['c', 'o', 'm', 'u', 'n', 'e', 's'], false)
+conjuntes(
+  ["a", "e", "i", "o", "u"],
+  ["c", "o", "m", "u", "n", "e", "s"],
+  false
+);
